@@ -61,6 +61,20 @@ Claude Code supports multiple configuration files for different scopes:
 
 You can place CLAUDE.md files in subdirectories for component or module-specific instructions.
 
+## MCP (Model Context Protocol) Integration
+
+Add external tools to Claude Code using MCP servers:
+
+```bash
+# Add a new MCP server (example: Playwright)
+claude mcp add playwright npx @playwright/mcp@latest
+
+# Manage MCP servers and view available tools
+/mcp
+```
+
 ## Resources
 
 - [Sample CLAUDE.md file](https://github.com/https-deeplearning-ai/ragchatbot-codebase/blob/main/CLAUDE.md)
+- [Common workflows](https://docs.anthropic.com/en/docs/claude-code/common-workflows)
+- [MCP Documentation](https://docs.anthropic.com/en/docs/claude-code/mcp)
