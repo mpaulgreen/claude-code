@@ -85,8 +85,27 @@ Extended thinking is most valuable for complex tasks such as:
 
 The way you prompt for thinking results in varying levels of thinking depth:
 
-- “think” triggers basic extended thinking
-- intensifying phrases such as “think more”, “think a lot”, “think harder”, or “think longer” triggers deeper thinking
+- "think" triggers basic extended thinking
+- intensifying phrases such as "think more", "think a lot", "think harder", or "think longer" triggers deeper thinking
+
+## Git Worktrees
+
+Git worktrees allow you to work on multiple branches simultaneously:
+
+1. **Create a worktrees folder**: `mkdir .trees`
+2. **Add a worktree**: `git worktree add ./trees/ui_feature`
+3. **View branches**: `git branch -a`
+4. **Work in parallel**: Open terminals for each feature branch
+5. **Commit changes**: Add and commit with descriptive messages
+6. **Merge branches**: Use `git merge` to merge worktrees and resolve conflicts
+7. **Cleanup**: Remove `.trees` folder when done and push to GitHub
+
+## GitHub Integration
+
+| Command | Description |
+|---------|-------------|
+| `/install-github-app` | Install GitHub app for enhanced integration |
+| `/hooks` | Manage hook configurations for GitHub events |
 
 ## Resources
 
