@@ -26,7 +26,26 @@ You can use regular bash commands within Claude Code by starting them with `!` (
 | `Cmd + Shift + Ctrl + 4` (Mac) / `Win + Shift + S` (Windows) | Take a screenshot |
 | `Ctrl + V` | Paste a screenshot (might not work on Windows) |
 
+## CLAUDE.md Files
+
+Claude Code uses several types of CLAUDE.md files for different purposes:
+
+### CLAUDE.md
+- Generated with `/init` command
+- Should be committed to source control
+- Shared with other engineers
+- Location: project directory
+
+### CLAUDE.local.md
+- Not shared with other engineers
+- Contains personal instructions and customizations for Claude
+- Location: project directory
+
+### ~/.claude/CLAUDE.md
+- Used for all projects on your machine
+- Contains instructions that you want Claude to follow on all projects
+- Location: `.claude` folder stored in your home directory
+
 ## Resources
 
 - [Sample CLAUDE.md file](https://github.com/https-deeplearning-ai/ragchatbot-codebase/blob/main/CLAUDE.md)
-
