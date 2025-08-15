@@ -21,6 +21,7 @@ A comprehensive guide to Claude Code commands, shortcuts, and configuration file
 | `ESC` | Interrupt Claude to redirect or correct |
 | `ESC ESC` | Rewind conversation to earlier point |
 | `@` | Mention files to include their content in requests |
+
 ## Bash Commands
 
 Execute bash commands by prefixing with `!` (example: `!pwd`). Type `exit` to quit Claude Code.
@@ -73,8 +74,23 @@ claude mcp add playwright npx @playwright/mcp@latest
 /mcp
 ```
 
+## Thinking
+Extended thinking is most valuable for complex tasks such as:
+
+- Planning complex architectural changes
+- Debugging intricate issues
+- Creating implementation plans for new features
+- Understanding complex codebases
+- Evaluating tradeoffs between different approaches
+
+The way you prompt for thinking results in varying levels of thinking depth:
+
+- “think” triggers basic extended thinking
+- intensifying phrases such as “think more”, “think a lot”, “think harder”, or “think longer” triggers deeper thinking
+
 ## Resources
 
 - [Sample CLAUDE.md file](https://github.com/https-deeplearning-ai/ragchatbot-codebase/blob/main/CLAUDE.md)
 - [Common workflows](https://docs.anthropic.com/en/docs/claude-code/common-workflows)
 - [MCP Documentation](https://docs.anthropic.com/en/docs/claude-code/mcp)
+- [Extended Thinking Tips](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/extended-thinking-tips)
