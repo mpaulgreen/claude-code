@@ -1,50 +1,65 @@
 # Claude Code Quick Reference
 
+A comprehensive guide to Claude Code commands, shortcuts, and configuration files.
+
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `/init` | Claude Code scans your codebase and creates CLAUDE.md file inside your project directory |
-| `:#` | Quickly add a memory. Useful when you see Claude Code repeats an error |
-| `\` | New line |
-| `/clear` | Clears current conversation history |
-| `/compact` | Summarizes current conversation history |
-| `ESC` | Interrupt Claude to redirect or correct it |
-| `ESC ESC` | Rewind the conversation to an earlier point in time |
-| `@` | Mention files with @ to include its content in your request |
-| `/mcp` | Manage MCP connection & check available MCP servers with their provided tools |
-
+| `/init` | Scan codebase and create CLAUDE.md file in project directory |
+| `:#` | Add a memory note (useful to prevent Claude from repeating errors) |
+| `\` | Insert new line |
+| `/clear` | Clear conversation history and free up context |
+| `/compact` | Clear conversation history but keep a summary in context |
+| `/resume` | Resume a conversation |
+| `/review` | Review a pull request |
+| `/memory` | Edit Claude memory files |
+| `/export` | Export the current conversation to a file or clipboard |
+| `/hooks` | Manage hook configurations for tool events |
+| `/ide` | Connect to an IDE |
+| `/mcp` | Manage MCP connections and view available servers/tools |
+| `ESC` | Interrupt Claude to redirect or correct |
+| `ESC ESC` | Rewind conversation to earlier point |
+| `@` | Mention files to include their content in requests |
 ## Bash Commands
 
-You can use regular bash commands within Claude Code by starting them with `!` (for example: `!pwd`). Type `exit` to quit Claude Code.
+Execute bash commands by prefixing with `!` (example: `!pwd`). Type `exit` to quit Claude Code.
 
 ## Keyboard Shortcuts
 
 | Shortcut | Description |
 |----------|-------------|
-| `Shift + Tab` | Switch between planning and auto-accept mode |
-| `Cmd + Shift + Ctrl + 4` (Mac) / `Win + Shift + S` (Windows) | Take a screenshot |
-| `Ctrl + V` | Paste a screenshot (might not work on Windows) |
+| `Shift + Tab` | Toggle between planning and auto-accept mode |
+| `Cmd + Shift + Ctrl + 4` (Mac)<br>`Win + Shift + S` (Windows) | Take screenshot |
+| `Ctrl + V` | Paste screenshot (may not work on Windows) |
 
-## CLAUDE.md Files
+## CLAUDE.md Configuration Files
 
-Claude Code uses several types of CLAUDE.md files for different purposes:
+Claude Code supports multiple configuration files for different scopes:
 
-### CLAUDE.md
-- Generated with `/init` command
-- Should be committed to source control
-- Shared with other engineers
-- Location: project directory
+### Project-Level Files
 
-### CLAUDE.local.md
-- Not shared with other engineers
-- Contains personal instructions and customizations for Claude
-- Location: project directory
+#### `CLAUDE.md`
+- **Purpose**: Project-wide instructions for all team members
+- **Created by**: `/init` command
+- **Version control**: Should be committed and shared
+- **Location**: Project root directory
 
-### ~/.claude/CLAUDE.md
-- Used for all projects on your machine
-- Contains instructions that you want Claude to follow on all projects
-- Location: `.claude` folder stored in your home directory
+#### `CLAUDE.local.md`
+- **Purpose**: Personal project customizations
+- **Version control**: Not shared with team (add to .gitignore)
+- **Location**: Project root directory
+
+### Global Configuration
+
+#### `~/.claude/CLAUDE.md`
+- **Purpose**: Instructions applied to all projects on your machine
+- **Location**: `.claude` folder in home directory
+- **Scope**: System-wide settings and preferences
+
+### Directory-Specific Instructions
+
+You can place CLAUDE.md files in subdirectories for component or module-specific instructions.
 
 ## Resources
 
